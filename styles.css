@@ -89,6 +89,10 @@ button:active {
   opacity: 60%;
 }
 
+.answer {
+  margin-top: 1rem;
+}
+
 .about-group {
   display: flex;
   justify-content: center;
