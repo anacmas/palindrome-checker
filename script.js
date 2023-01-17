@@ -1,8 +1,13 @@
 const button = document.querySelector(".button-check"),
-  answer = document.querySelector(".answer"),
-  word = document.querySelector(".input-word").value;
+  answer = document.querySelector(".answer");
 
 button.addEventListener("click", function () {
-  // word.toUpperCase();
-  console.log(word);
+  let word = document.querySelector(".input-word").value.toUpperCase();
+  wordReversed = word.split("").reverse().join("");
+
+  if (wordReversed == word) {
+    answer.innerHTML = "This is a palindrome";
+  } else {
+    answer.innerHTML = "This is not a palindrome";
+  }
 });
