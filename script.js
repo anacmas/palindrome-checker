@@ -3,9 +3,10 @@ const button = document.querySelector(".button-check"),
 
 button.addEventListener("click", function () {
   let word = document.querySelector(".input-word").value;
-  wordReversed = word.toUpperCase().split("").reverse().join("");
+  wordUppercase = word.toUpperCase();
+  wordReversed = wordUppercase.split("").reverse().join("");
 
-  if (wordReversed == word) {
+  if (wordReversed == wordUppercase) {
     answer.innerHTML = `${word} is a palindrome`;
   } else {
     answer.innerHTML = `${word} is not a palindrome`;
